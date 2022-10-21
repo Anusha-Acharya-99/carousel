@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
 import Carousel from "./components/carousel";
+import { carouselData } from "./data";
 
 function App() {
   return (
     <div className="App">
-      <Carousel />
+      <Carousel carouselData={carouselData} />
     </div>
   );
 }

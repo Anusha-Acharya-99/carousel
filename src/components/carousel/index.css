@@ -1,6 +1,6 @@
 .carousel-container {
-  width: 600px;
-  height: 300px;
+  width: 750px;
+  height: 400px;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -14,5 +14,5 @@
 }
 
 .carousel-image {
-  height: 260px;
+  height: 360px;
 }
