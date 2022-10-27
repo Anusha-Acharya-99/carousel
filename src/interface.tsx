@@ -6,3 +6,8 @@ export interface carouselDataProps {
     url: string;
   }[];
 }
+
+export interface buttonProps {
+  src: string;
+  clickFunction: React.MouseEventHandler<HTMLElement>;
+}

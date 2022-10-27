@@ -1,8 +1,9 @@
-import React, { FC, useState } from "react";
-import "./index.css";
-import prev from "../../assets/icons/prev-icon.png";
-import next from "../../assets/icons/next-icon.png";
-import { carouselDataProps } from "../../interface";
+import React, { FC, useState } from 'react';
+import './index.css';
+import prev from '../../assets/icons/prev-icon.png';
+import next from '../../assets/icons/next-icon.png';
+import { carouselDataProps } from '../../interface';
+import Button from '../button';
 
 const Carousel: FC<carouselDataProps> = ({ carouselData }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -17,14 +18,14 @@ const Carousel: FC<carouselDataProps> = ({ carouselData }) => {
       : setCurrentSlideIndex(currentSlideIndex - 1);
   };
   return (
-    <div className="carousel-container">
-      <img className="buttons" src={prev} alt="" onClick={prevSlide} />
+    <div className='carousel-container'>
+      <Button src={prev} clickFunction={prevSlide} />
       <img
-        className="carousel-image"
+        className='carousel-image'
         src={carouselData[currentSlideIndex].url}
         alt={carouselData[currentSlideIndex].alt}
       />
-      <img className="buttons" src={next} alt="" onClick={nextSlide} />
+      <Button src={next} clickFunction={nextSlide} />
     </div>
   );
 };
